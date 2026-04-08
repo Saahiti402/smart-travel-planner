@@ -1,12 +1,7 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
-from dotenv import load_dotenv
-import os
 
-load_dotenv()
-
-DATABASE_URL = os.getenv("DATABASE_URL")
-
+DATABASE_URL=postgresql://USERNAME:team123@192.168.1.10:5432/smart_travel_planner
 engine = create_engine(DATABASE_URL, echo=True)
 
 SessionLocal = sessionmaker(
@@ -17,4 +12,9 @@ SessionLocal = sessionmaker(
 
 Base = declarative_base()
 
-print("DATABASE_URL:", DATABASE_URL)
+# create tables
+from models import *
+
+Base.metadata.create_all(bind=engine)
+
+print("Tables created successfully")
