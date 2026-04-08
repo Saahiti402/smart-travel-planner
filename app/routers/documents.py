@@ -14,7 +14,7 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 # =========================
 # CONFIG
 # =========================
-BASE_DIR = Path(__file__).resolve().parents[1]
+BASE_DIR = Path(__file__).resolve().parents[2]
 DATA_PATH = Path(os.getenv("RAG_DATA_PATH", str(BASE_DIR / "RAG_Data")))
 VECTOR_DB_PATH = Path(os.getenv("RAG_VECTOR_DB_PATH", str(BASE_DIR / "vector_store")))
 
