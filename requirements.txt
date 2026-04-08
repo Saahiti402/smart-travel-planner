@@ -3,3 +3,9 @@ uvicorn
 sqlalchemy
 psycopg2-binary
 python-dotenv
+langchain
+langchain-community
+langchain-openai
+langchain-text-splitters
+faiss-cpu
+tiktoken
