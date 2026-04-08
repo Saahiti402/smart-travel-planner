@@ -6,7 +6,6 @@ app = FastAPI()
 
 Base.metadata.create_all(bind=engine)
 
-
 @app.get("/")
 def home():
     return {"message": "Travel Assistant Backend Running"}
